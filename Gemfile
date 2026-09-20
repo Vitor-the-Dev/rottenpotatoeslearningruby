@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-gem "json", "< 3"
+gem "json", "< 4"
 gem "minitest", "< 6"
 gem "haml-rails"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
