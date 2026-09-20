@@ -4,10 +4,23 @@
 
 %h1 Movies
 
-%div{id: "movies"}
-  - @movies.each do |movie|
-    = render movie
-    %p
-      = link_to "Show this movie", movie
+%table
+  %thead
+    %tr
+      %th{class: (@sort_by == "title" ? "sorted" : "")}
+        = link_to "Título", movies_path(:sort_by => "title"), id: "title_header"
+      %th Classificação
+      %th{class: (@sort_by == "release_date" ? "sorted" : "")}
+        = link_to "Lançamento", movies_path(:sort_by => "release_date"), id: "release_date_header"
+      %th Descrição
+      %th
+  %tbody
+    - @movies.each do |movie|
+      %tr
+        %td= movie.title
+        %td= movie.rating
+        %td= movie.release_date
+        %td= movie.description
+        %td= link_to "Show this movie", movie
 
 = link_to "New movie", new_movie_path
