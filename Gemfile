@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 gem "json", "< 3"
-gem "minitest", "< 6"
+gem "minitest", "< 7"
 gem "haml-rails"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.2", ">= 7.2.2.2"
